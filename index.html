@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            color: #fff;
+            background: #000;
+        }
+
+        .head {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-image: url(bg.jpg);
+            position: relative;
+        }
+
+
+        .head::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .6);
+            z-index: 1;
+        }
+
+        .nav,
+        .main {
+            position: relative;
+            z-index: 2;
+            
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 500px;
+            padding: 10px 50px;
+        }
+
+        .nav img {
+            margin-left: 200px;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        select {
+            padding: 6px;
+            border-radius: 4px;
+            color: white;
+            background-color: black;
+        }
+
+        button {
+            padding: 6px 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 100px;
+            color: white;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .main h1 {
+            font-weight: bolder;
+            font-size: 3rem;
+        }
+
+        .email {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .email input {
+            padding: 20px;
+            width: 250px;
+            height: 40px;
+
+        }
+
+        .email button {
+            padding: 15px;
+            border: none;
+            font-weight: bolder;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding-right: 85px;
+            align-items: center;
+            height: 80vh;
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            padding-left: 100px;
+            font-weight: lighter;
+            flex-wrap: wrap;
+        }
+
+        .text h1 {
+            margin-top: -20px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-size: 2.5rem;
+        }
+
+        .text p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+
+        }
+
+        .ques {
+            font-size: larger;
+            margin-top: 100px;
+            margin-bottom: 120px;
+            text-align: center;
+
+
+        }
+
+        .box svg {
+            color: white;
+        }
+
+        .box {
+            display: flex;
+            background-color: #2d2d2d;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 80vw;
+            justify-content: space-between;
+            font-size: 23px;
+        }
+
+        .box:hover {
+            transition: all;
+            background-color: #414141;
+        }
+
+        .footer {
+            padding-left: 120px;
+            color: rgba(255, 255, 255, 0.7);
+            height: 100vh;
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 80px;
+            padding-top: 30px;
+            width: 100%;
+        }
+
+        /* Apply same style to all tag lists */
+        .footer-links ul {
+            list-style-type: none;
+            line-height: 2;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            width: 300px;
+        }
+        
+.language-select {
+    margin-top: 40px;
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    font-size: 14px;
+    text-align: left;
+}
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="nav">
+            <img height="40px" src="logo.png" alt="">
+
+            <div class="nav-right">
+                <select name="Lang">
+                    <option value="English">English</option>
+                    <option value="Hindi"> Hindi</option>
+                </select>
+                <button>Sign In</button>
+            </div>
+        </div>
+        <div class="main">
+            <h1>
+                Unlimited movies, TV
+            </h1>
+            <h1>shows and more</h1>
+            <h3>Starts at ₹149. Cancel at any time.</h3>
+            <p>Ready to watch? Enter your email to create or restart your membership.
+            </p>
+            <form class="email">
+                <input type="email" placeholder="Email address">
+                <button type="submit">Get Started</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="features">
+
+        <div class="text">
+            <h1>
+                Enjoy on your <br> TV.
+            </h1>
+            <p>
+                Watch on smart TVs, PlayStation, Xbox,<br>
+                Chromecast, Apple TV, Blu-ray players and more.
+            </p>
+
+        </div>
+        <img height="350px" src="feature-1.png" alt="">
+
+
+    </div>
+
+    <div class="features">
+        <img height="350px" src="feature-2.png" alt="">
+        <div class="text">
+            <h1>
+                Download your shows <br>
+                to watch offline.
+            </h1>
+            <p>
+                Save your favourites easily <br>
+                and always have something to watch.
+            </p>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="features">
+
+        <div class="text">
+            <h1>
+                Watch everywhere.
+            </h1>
+            <p>
+                Stream unlimited movies and TV shows<br>
+                on your phone, tablet, laptop, and TV.
+            </p>
+
+        </div>
+        <img height="350px" src="feature-3.png" alt="">
+
+
+    </div>
+
+    <div class="features">
+        <img height="350px" src="feature-4.png" alt="">
+        <div class="text">
+            <h1>
+                Create profiles <br> for children.
+            </h1>
+            <p>
+                Send children on adventures with their <br>
+                favourite characters in a space made just for them<br>
+                free with your membership.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="ques">
+        <h2>Frequently Asked Questions</h2>
+        <div class="box">
+            What is Netflix?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                fill="none">
+                <path d="M12.001 5.00003V19.002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M19.002 12.002L4.99998 12.002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="box">
+            How much does Netflix cost?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                fill="none">
+                <path d="M12.001 5.00003V19.002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M19.002 12.002L4.99998 12.002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="box">
+            Where can I watch?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                fill="none">
+                <path d="M12.001 5.00003V19.002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M19.002 12.002L4.99998 12.002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="box">
+            How do I cancel?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                fill="none">
+                <path d="M12.001 5.00003V19.002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M19.002 12.002L4.99998 12.002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="box">
+            What can I watch on Netflix?
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#000000"
+                fill="none">
+                <path d="M12.001 5.00003V19.002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M19.002 12.002L4.99998 12.002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="call">
+            <h4>Questions? Call <a href="#about">000-800-919-1743</a></h4>
+            <div class="footer-links">
+                <div class="tags1">
+                    <ul>
+                        <li><a href="#about">FAQ</a> </li>
+                        <li><a href="#about">Help Centre</a></li>
+                        <li><a href="#about">
+                                Account</a></li>
+                        <li><a href="#about">Media Centre</a></li>
+                    </ul>
+                </div>
+                <div class="tags2">
+                    <ul>
+                        <li><a href="#about">Investor Relations</a> </li>
+                        <li><a href="#about">Jobs</a></li>
+                        <li><a href="#about">Ways to Watch</a></li>
+                        <li><a href="#about">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="tags3">
+                    <ul>
+                        <li><a href="#about">Privacy</a> </li>
+                        <li><a href="#about">Cookie Preferences</a></li>
+                        <li><a href="#about">Corporate Information</a></li>
+                        <li><a href="#about">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <select class="language-select">
+                <option>English</option>
+                <option>हिन्दी</option>
+            </select>
+        </div>
+    </div>
+</body>
+
+</html>
+git remote add origin https://github.com/ayushn28/netflix-clone.git
