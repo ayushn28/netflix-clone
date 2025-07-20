@@ -26,7 +26,7 @@
             position: relative;
         }
 
-
+        /* 🔴 Dark overlay */
         .head::before {
             content: "";
             position: absolute;
@@ -35,6 +35,7 @@
             right: 0;
             bottom: 0;
             background-color: rgba(0, 0, 0, .6);
+            /* Adjust opacity here */
             z-index: 1;
         }
 
@@ -42,7 +43,7 @@
         .main {
             position: relative;
             z-index: 2;
-            
+            /* 🔼 Makes sure content is above the overlay */
         }
 
         .nav {
@@ -204,16 +205,77 @@
         .footer-links li {
             width: 300px;
         }
-        
-.language-select {
-    margin-top: 40px;
-    padding: 10px 10px;
-    background-color: black;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    font-size: 14px;
-    text-align: left;
-}
+
+        .language-select {
+            margin-top: 40px;
+            padding: 10px 10px;
+            background-color: black;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            font-size: 14px;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 20px;
+                padding: 10px;
+                align-items: flex-start;
+            }
+
+            .features {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 20px;
+                height: auto;
+            }
+
+            .text {
+                padding: 0;
+            }
+
+            .email {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .email input,
+            .email button {
+                width: 90%;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
+                padding-left: 0;
+            }
+
+            .features img {
+                width: 90%;
+                height: auto;
+            }
+
+            .main h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .main h3,
+            .main p {
+                text-align: center;
+                padding: 0 10px;
+            }
+
+            .box {
+                font-size: 18px;
+                padding: 15px;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
     </style>
 </head>
 
@@ -406,4 +468,3 @@
 </body>
 
 </html>
-git remote add origin https://github.com/ayushn28/netflix-clone.git
